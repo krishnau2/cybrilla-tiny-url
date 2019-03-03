@@ -1,0 +1,7 @@
+<div class="form-container">
+    <%= form_for @url_bank, url: {action: "create"} do |f| %>
+        <%= label_tag(:actual_url, "Paste a link to shorten: ") %>
+        <%= f.text_field :actual_url %>
+        <%= f.submit "Get short Url" %>
+    <% end %>
+</div>
