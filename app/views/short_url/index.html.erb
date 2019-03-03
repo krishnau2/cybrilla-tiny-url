@@ -1,13 +1,16 @@
 <div class="form-container">
     <%= form_for @url_bank, url: {action: "create"} do |f| %>
-        <%= label_tag(:actual_url, "Paste a link to shorten: ") %>
-        <%= f.text_field :actual_url %>
-        <%= f.submit "Get short Url" %>
+        <div>
+            <%= f.text_field :actual_url, class: "actual_url", placeholder: "Paste a link to shorten"%>
+        </div>
+        <div>
+            <%= f.submit "Get short Url", class: "submit-button" %>
+        </div>
     <% end %>
 </div>
 
 <% if flash[:error].present? %>
-    <%= flash[:error] %>
+    <div class="flash-error"><%= flash[:error] %></div>
 <% end %>
 
 <% if @short_url && !@short_url.blank? %>

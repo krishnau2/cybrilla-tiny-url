@@ -1,5 +1,5 @@
 class ShortUrlController < ApplicationController
-    before_action :set_new_url_bank
+    before_action :set_new_url_bank, only: [:index, :create]
 
     def index
     end
@@ -16,6 +16,17 @@ class ShortUrlController < ApplicationController
 
         render :index
     end
+
+    def show
+        redirect_to root_path if params[:tiny_url] == 'short_url'
+        url_entry = UrlBank.find_by(tiny_url: params[:tiny_url])
+        if url_entry
+            @actual_url = url_entry.actual_url
+            redirect_to @actual_url
+        else
+            @no_record_found = true
+        end
+    end
     
     private
 
@@ -28,6 +39,6 @@ class ShortUrlController < ApplicationController
         end
 
         def short_url_with_host(tiny_url)
-            "#{request.host_with_port}/#{tiny_url}"
+            "http://#{request.host_with_port}/#{tiny_url}"
         end
 end

@@ -5,8 +5,50 @@
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 100px;
     text-align: center;
     .title {
         width: 100%;
+        font-size: 45px;
+        color: #007C21;
+        text-decoration: none;
     }
+    .actual_url {
+        width: 400px;
+        border: 1px solid #27AE60;
+        border-radius: 5px;
+        height: 30px;
+        padding-left: 10px;
+        margin-top: 30px;
+    }
+    .submit-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border: 1px solid #4CAF50;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .result {
+        margin-top: 30px;
+        font-size: 25px;
+        .url {
+            color: #27AE60
+        }
+    }
+    .flash-error {
+        margin-top: 30px;
+        font-size: 20px;
+        color: #F75C4C;
+    }
+    .no-record-found{
+        margin-top: 50px;
+        font-size: 20px;
+        color: #F75C4C;
+    }
+
 }

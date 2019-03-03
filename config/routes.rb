@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/:tiny_url', to: "short_url#show"
+
+  resources :short_url
   post 'short_url/create'
   root 'short_url#index'
 
