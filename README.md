@@ -1,24 +1,12 @@
-# README
+# Tiny Url Generator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+* git clone git@github.com:krishnau2/cybrilla-tiny-url.git
 
-* Ruby version
+* cd cybrilla-tiny-url
 
-* System dependencies
+* bundle install
 
-* Configuration
+* rake db:create & rake db:migrate
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* To run test: rails test
