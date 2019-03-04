@@ -18,6 +18,8 @@ class UrlHashGenerator
         SecureRandom.urlsafe_base64(4)
     end
 
+    private
+
     def find_duplicate(new_key)
         UrlBank.find_by(tiny_url: new_key)
     end
